@@ -1,0 +1,52 @@
+{
+  "name": "@viateai/plugin-qwenwork",
+  "version": "0.0.0",
+  "description": "Viate provider for a personal 千问办公 account. Browser device login, no API key.",
+  "license": "MIT",
+  "private": false,
+  "type": "module",
+  "packageManager": "pnpm@12.16.1",
+  "engines": {
+    "node": ">=24",
+    "pnpm": "12.16.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViateAI/viate-plugin-qwenwork.git"
+  },
+  "viate": {
+    "id": "qwenwork",
+    "entry": "dist/index.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "vendor/qoder-auth-wasm/qoder_auth_wasm_bg.wasm",
+    "LICENSE",
+    "README.md",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prepack": "tsc -p tsconfig.build.json",
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --import tsx --test \"src/**/*.test.ts\""
+  },
+  "peerDependencies": {
+    "@viateai/sdk": "1.0.1"
+  },
+  "devDependencies": {
+    "@viateai/sdk": "1.0.1",
+    "@types/node": "24.10.13",
+    "tsx": "4.23.13",
+    "typescript": "5.9.3"
+  }
+}
