@@ -1,6 +1,6 @@
 {
   "name": "@viateai/plugin-qwenwork",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Viate provider for a personal 千问办公 account. Browser device login, no API key.",
   "license": "MIT",
   "private": false,
